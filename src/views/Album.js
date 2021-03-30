@@ -1,10 +1,10 @@
 import React from "react";
-import Riot from "../images/riot.jpg";
+import AlbumCover from "../images/riot.jpg";
 
 export const Album = () => {
   return (
     <>
-      <img src={Riot} alt="Riot" style={styles.img} />
+      <img src={AlbumCover} alt="album-cover" style={styles.img} />
     </>
   );
 };
