@@ -1,22 +1,35 @@
 import React from "react";
+import Icon from "../images/logo.png";
 
-export const Header = () => {
+export const Header = ({ usingBackground }) => {
   return (
-    <div style={styles.container}>
-      <h1 style={{ marginBottom: "10px" }}>Band Ipsum</h1>
-      <p style={{ fontSize: "19px" }}>Your Lorem Ipsum of bands</p>
-    </div>
+    <>
+      {!usingBackground ? (
+        <div style={styles.container}>
+          <img src={Icon} alt="page-icon" style={styles.icon} />
+          <p style={{ fontSize: "19px" }}>Your Lorem Ipsum of bands</p>
+        </div>
+      ) : (
+        <div style={{ ...styles.container, margin: "0 auto" }}>
+          <img src={Icon} alt="page-icon" style={styles.icon} />
+          <p style={{ fontSize: "19px" }}>Your Lorem Ipsum of bands</p>
+        </div>
+      )}
+    </>
   );
 };
 
 const styles = {
   container: {
     display: "flex",
-    flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
     width: "90%",
-    margin: "40px auto 0 auto",
-    padding: "10px",
+    margin: "15px auto 20px auto",
+  },
+  icon: {
+    width: "50px",
+    height: "50px",
+    marginRight: "15px",
   },
 };
